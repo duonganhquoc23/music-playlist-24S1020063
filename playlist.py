@@ -1,6 +1,19 @@
 # Danh sách toàn cục lưu các bài hát
 songs = []
 
+def search_by_artist():
+    artist_name = input("Nhập tên ca sĩ cần tìm: ").strip().lower()
+
+    found = False
+    print("\n--- KẾT QUẢ TÌM KIẾM ---")
+    for song in songs:
+        if artist_name in song["artist"].lower():
+            print(f"{song['title']} - {song['artist']} ({song['duration']}s)")
+            found = True
+
+    if not found:
+        print("Không tìm thấy bài hát nào của ca sĩ này.")
+
 def view_playlist():
     if not songs:
         print("Danh sách bài hát trống!")
