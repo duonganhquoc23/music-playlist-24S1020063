@@ -1,6 +1,15 @@
 # Danh sách toàn cục lưu các bài hát
 songs = []
 
+def view_playlist():
+    if not songs:
+        print("Danh sách bài hát trống!")
+        return
+    
+    print("\n--- DANH SÁCH BÀI HÁT ---")
+    for i, song in enumerate(songs, start=1):
+        print(f"{i}. {song['title']} - {song['artist']} ({song['duration']}s)")
+
 def main():
     while True:
         print("\n--- MUSIC PLAYLIST MANAGER ---")
