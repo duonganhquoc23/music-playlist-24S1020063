@@ -9,6 +9,11 @@ def view_playlist():
     print("\n--- DANH SÁCH BÀI HÁT ---")
     for i, song in enumerate(songs, start=1):
         print(f"{i}. {song['title']} - {song['artist']} ({song['duration']}s)")
+=======
+def add_song():
+# Nhập tên bài, ca sĩ, thời lượng -> append vào songs
+print("Đã thêm bài hát vào playlist.")
+
 
 def main():
     while True:
